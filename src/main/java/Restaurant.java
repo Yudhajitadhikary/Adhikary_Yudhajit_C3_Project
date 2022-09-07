@@ -33,6 +33,20 @@ public class Restaurant {
         return menu;
         //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
+    public int getTotalPrice (List<String> menuList){
+        List<Item> menu =getMenu();
+        int total=0;
+        for(String item:menuList){
+            for (Item menuItem :menu) {
+                if (menuItem.getName().equals(item)){
+                    total=total+menuItem.getPrice();
+
+                }
+            }
+
+        }
+        return total;
+    }
 
     private Item findItemByName(String itemName){
         for(Item item: menu) {

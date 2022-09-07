@@ -60,10 +60,7 @@ class RestaurantTest {
     public void removing_item_from_menu_should_decrease_menu_size_by_1() throws itemNotFoundException {
 
         int initialMenuSize = restaurant.getMenu().size();
-        restaurant.removeFromMenu("Vegetable lasagne");{
-            restaurant.removeFromMenu("Vegetable lasagne");
-            assertEquals(initialMenuSize-1,restaurant.getMenu().size());
-        }
+        restaurant.removeFromMenu("Vegetable lasagne");
         assertEquals(initialMenuSize-1,restaurant.getMenu().size());
     }
     @Test
@@ -79,7 +76,7 @@ class RestaurantTest {
             add("Sweet corn soup");
             add("Vegetable lasagne");
         }};
-        assertEquals(119,()->restaurant.getTotalPrice(dummy));
+        assertEquals(388,restaurant.getTotalPrice(dummy));
     }
 
 }
